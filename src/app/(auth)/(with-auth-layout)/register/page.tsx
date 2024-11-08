@@ -5,6 +5,7 @@ const Register = () => {
   return (
     <>
       <Link href="/">Home</Link>
+      <br />
       Register Page
     </>
   )
