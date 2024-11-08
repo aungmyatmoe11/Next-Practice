@@ -1,4 +1,12 @@
+import { Metadata } from "next"
 import React from "react"
+
+export const metadata: Metadata = {
+  // title: "Auth Layout",
+  title : {
+    absolute : "Absolute Auth Layout"
+  }
+}
 
 const AuthLayout = ({ children }: { children: React.ReactNode }) => {
   return (
