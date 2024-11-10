@@ -1,3 +1,5 @@
+export const fetchCache = "default-cache"
+
 import { cookies } from "next/headers";
 
 type Product = {
@@ -9,7 +11,8 @@ type Product = {
 
 export default async function ProductsPage() {
   const productsResponse = await fetch("http://localhost:3001/products", {
-    next: { revalidate: 10 }, // ! cached
+    // next: { revalidate: 10 }, // ! cached
+    cache: "no-store"
   });
   const cookieStore = cookies();
   const theme = cookieStore.get("theme");
