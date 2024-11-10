@@ -1,15 +1,13 @@
-import React from "react"
-import { serverSideFunction } from "../utils/server-utils"
+import { ImageSlider } from "../components/image-slider";
+import { serverSideFunction } from "../utils/server-utils";
 
-const ServerRoutePage = () => {
-  console.log("SEVER ROUTE RENDER")
-  const result = serverSideFunction()
+export default function ServerRoutePage() {
+  const result = serverSideFunction();
   return (
-    <div>
-      <h1>Server Route Page</h1>
-      <h1>{result}</h1>
-    </div>
-  )
+    <>
+      <h1>Server Route</h1>
+      <p>{result}</p>
+      <ImageSlider />
+    </>
+  );
 }
-
-export default ServerRoutePage
