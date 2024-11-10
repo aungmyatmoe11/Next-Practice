@@ -11,8 +11,8 @@ type Product = {
 
 export default async function ProductsPage() {
   const productsResponse = await fetch("http://localhost:3001/products", {
-    // next: { revalidate: 10 }, // ! cached
-    cache: "no-store"
+    next: { revalidate: 10 }, // ! cached 10 seconds
+    // cache: "no-store" // ! no cached
   });
   const cookieStore = cookies();
   const theme = cookieStore.get("theme");
